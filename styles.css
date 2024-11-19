@@ -1,0 +1,25 @@
+body {
+    background:#F6F6F6;
+    padding: 40px 40px 40px 40px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+    background: #ffffff;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.main-content {
+    padding-left: 88px;
+    padding-top: 80px;
+    padding-right: 40px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+}
+
+.project-item {
+    background-color:yellow ;
+    font-size: 30px;
+}
