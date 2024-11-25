@@ -13,10 +13,16 @@ ol {
 /* Wrapper*/
 .wrapper {
     background: #FFFFFF;
-    display: flex;
-    flex-direction: row-reverse;
-    width: 1200px;
+    
+    width: 100%;
     margin: 0 auto;
+}
+
+@media(min-width:992px){
+    .wrapper{
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }
 
 
@@ -36,7 +42,17 @@ ol {
     padding-top: 40px;
     padding-bottom: 40px;
     box-sizing: border-box;
-    width: 370px;
+    width: 100%;
+}
+
+@media(min-width:992px){
+    .sidebar{
+        width: 370px;
+    }
+}
+
+.sidebar img {
+    width: 100%;
 }
 
 
