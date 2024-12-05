@@ -1,29 +1,25 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
+import gulp from 'gulp';
+import zip from 'gulp-zip';
+import tar from 'gulp-tar';
+import gzip from 'gulp-gzip';
 
-// Шляхи до файлів
 const paths = {
-    scss: './src/scss/**/*.scss', // Всі SCSS-файли в папці src/scss
-    css: './dist/css/'           // Папка для згенерованих CSS
+    files: './dist/**/*',
+    debugArchive: './archives/debug.zip',
+    productionArchive: './archives/production.tar.gz',
 };
 
-// Завдання: компіляція SCSS у CSS
-function styles() {
-    return gulp.src(paths.scss) // Вхідні файли
-        .pipe(sass().on('error', sass.logError)) // Компіляція SCSS
-        .pipe(autoprefixer({ // Додавання префіксів
-            cascade: false
-        }))
-        .pipe(cleanCSS()) // Мініфікація CSS
-        .pipe(gulp.dest(paths.css)); // Збереження згенерованого CSS
-}
+export const createDebugArchive = () => {
+    return gulp.src(paths.files)
+        .pipe(zip('debug.zip'))
+        .pipe(gulp.dest('./archives'));
+};
 
-// Спостереження за змінами
-function watch() {
-    gulp.watch(paths.scss, styles); // Спостереження за SCSS
-}
+export const createProductionArchive = () => {
+    return gulp.src(paths.files)
+        .pipe(tar('production.tar'))
+        .pipe(gzip())
+        .pipe(gulp.dest('./archives'));
+};
 
-// Завдання за замовчуванням
-exports.default = gulp.series(styles, watch);
+export default gulp.series(createDebugArchive, createProductionArchive);
