@@ -4,21 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My website </title>
+    <title>My Resume</title>
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 </head>
-
-
 <body>
     <!--Wrapper-->
-    <div class = "wrapper">
+    
+    <button id="toTop" class="to-top" aria-label="Повернутися догори">↑</button>
+
+    <div class="wrapper">
+        <!-- Header -->
+        <header class="header">
+            <h1>My Site</h1>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        </header>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="my_selo.html">Про мій Райгород</a></li>
+                <li><a href="myxoby.html">Мої захоплення</a></li>
+                <li><a href="myZVO.html">Мій ЗВО та моя майбутня професія</a></li>
+                <li><a href="pro_mene.html">Ще більше про мене</a></li>
+            </ul>
+        </nav>
+
         <!-- Main content -->
-        <div class="main-content" >
-            <!-- My info-->
+        <div class="main-content">
+            <!-- My info -->
             <div class="my-info">
                 <h2 class="my-profession"> Студентка 3 курсу, діва за гороскопом і просто... </h2>
                 <h1 class="my-name"> Меркулова Дарина Олегівна </h1>
@@ -27,72 +42,38 @@
                         Давайте почнемо з початку, народилася я 31 серпня 2005 року (так, перед днем знань), тому кожне моє день народження проходило в школі на репетиції (правда дуже весело?). Продовжимо, жартома говорячи з дитинства у мені ріс малий підприємець (дуже іронічно, адже у 19 років мій зріст 154 см). Про мою підприємницьку діяльність ви можете дізнатись у вкладці "Ще більше мене". </p>
              </div>
 
-
-            <!-- My project -->
+            <!-- My projects -->
             <div class="my-projects-container">
-                <h3 class="my-projects-title"> Для тих кому цікаво дізнатись більше про мене </h3>
-
+                <h3 class="my-projects-title">Для тих кому цікаво дізнатись більше про мене</h3>
                 <ol class="my-projects-list">
-
-                    <li class=" my-projects-item">
-                        <a class=" my-projects-item-link" href="my_selo.html" >Про мій Райгород</a>
-                        <span class=" my-projects-item-tech">                           
-                        </span>
-
-                    </li>
-
-                    <li class=" my-projects-item">
-                        <a class=" my-projects-item-link" href="myxoby.html" >Мої захоплення</a>
-                        <span class=" my-projects-item-tech">
-                        </span>
-
-                    <li class=" my-projects-item">
-                            <a class=" my-projects-item-link" href="myZVO.html" >Мій ЗВО та моя майбутня професія</a>
-                            <span class=" my-projects-item-tech">
-                            </span>
-    
-                    </li>
-
-                    <li class=" my-projects-item">
-                        <a class=" my-projects-item-link" href="pro_mene.html" > Ще більше про мене</a>
-                        <span class=" my-projects-item-tech">
-                        </span>
-
-                    </li>
-
-                    </li>
+                    <li><a href="my_selo.html">Про мій Райгород</a></li>
+                    <li><a href="myxoby.html">Мої захоплення</a></li>
+                    <li><a href="myZVO.html">Мій ЗВО та моя майбутня професія</a></li>
+                    <li><a href="pro_mene.html">Ще більше про мене</a></li>
                 </ol>
             </div>
-            
-
-           
         </div>
-
-
-
-            <!-- Sidebar -->
-            <aside class=" sidebar " >
-                <img src="img/IMG_4709.png" alt="My photo" >
-
-                <div class="sidebar-content">
-                    <!-- Contacts -->
-                    <div class="contacts-container">
-                        <h3 class="contacts-title"> Contacts </h3>
-                        <p class="contacts-item">
-                            <span class=" contacts-type"> C: </span>
-                            <a class="contacts-link" href="tel:+380635679497" > +380635679497 </a>
-                        </p>
-                        <p class="contacts-item">
-                            <span class="contacts-type"> E: </span>
-                            <a class="contacts-link" href="mailto:darinamerkulova984@gmail.com">darinamerkulova984@gmail.com</a>
-                        </p>
-                    </div>
-                    
-
-                    
+        <script src="js/script.js"></script>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="img/IMG_4709.png" alt="My photo">
+            <div class="sidebar-content">
+                <!-- Contacts -->
+                <div class="contacts-container">
+                    <h3 class="contacts-title">Contacts</h3>
+                    <p class="contacts-item">
+                        <span class="contacts-type">C:</span>
+                        <a href="tel:+380635679497">+380635679497</a>
+                    </p>
+                    <p class="contacts-item">
+                        <span class="contacts-type">E:</span>
+                        <a href="mailto:darinamerkulova984@gmail.com">darinamerkulova984@gmail.com</a>
+                    </p>
                 </div>
-            </aside>
-
+            </div>
+        </aside>
     </div>
+
+    <script src="script.js"></script>
+
 </body>
-</html>

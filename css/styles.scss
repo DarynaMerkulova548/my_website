@@ -250,3 +250,80 @@ ul, ol {
   }
 }
 
+// Змінні
+$primary-color: #6d9bf5;
+$text-color: #000;
+$background-color: #fff;
+$box-shadow-color: rgba(0, 0, 0, 0.1);
+$toggle-padding: 10px;
+$menu-width: 70%;
+$font-size: 18px;
+$media-breakpoint: 768px;
+
+// Основні стилі
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: $toggle-padding;
+  right: $toggle-padding;
+  background: $primary-color;
+  color: $background-color;
+  border: none;
+  padding: $toggle-padding;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $menu-width;
+  height: 100%;
+  background: $background-color;
+  box-shadow: 2px 0 5px $box-shadow-color;
+  padding: 20px;
+  z-index: 999;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: $font-size;
+      }
+    }
+  }
+}
+
+// Мобільна версія
+@media (max-width: $media-breakpoint) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
+// Десктопна версія
+@media (min-width: ($media-breakpoint + 1)) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+
